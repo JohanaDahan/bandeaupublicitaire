@@ -14,11 +14,12 @@ public class Scenario {
     private ArrayList<Effet> listeEffets;
     private Bandeau bandeau;
 
-    public Scenario(ArrayList<Effet> listeEffets, Bandeau bandeau) {
+    public Scenario( Bandeau bandeau) {
         this.listeEffets = listeEffets;
         this.bandeau = bandeau;
     }
 
+    
     public ArrayList<Effet> getListeEffets() {
         return listeEffets;
     }
