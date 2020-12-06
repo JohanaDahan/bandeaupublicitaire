@@ -6,6 +6,8 @@
 package exemple;
 
 import bandeau.Bandeau;
+import java.awt.Color;
+
 
 /**
  *
@@ -17,17 +19,18 @@ import bandeau.Bandeau;
        
     
 
-    public Rotate(int repetition, String message, Bandeau bandeau) {
-        super(repetition, message, bandeau);
+    public Rotate(int repetition, String message,Color couleurEffet, Bandeau bandeau) {
+        super(repetition, message, couleurEffet, bandeau);
     }
 
-    
-    public void execution() {
+
+    public void play() {
         bandeau.setMessage(this.message);
+        bandeau.setForeground(couleurEffet);
         for(int r = 0; r<this.repetition;r++){
-            for (int i = 0; i <= 50; i++) {
-                    bandeau.setRotation(380*i /50);
-                    bandeau.sleep(500);
+            for (int i = 0; i <= 100; i++) {
+                    bandeau.setRotation(2*Math.PI*i / 100);
+                    bandeau.sleep(50);
             }
         }
     }

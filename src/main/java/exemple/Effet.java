@@ -5,6 +5,7 @@
  */
 package exemple;
 import bandeau.Bandeau;
+import java.awt.Color;
 /**
  *
  * @author johan
@@ -12,12 +13,17 @@ import bandeau.Bandeau;
 public class Effet {
     public int repetition;
     public String message;
+    protected Color couleurEffet;
     Bandeau bandeau;
+    
 
-    public Effet(int repetition, String message, Bandeau bandeau) {
+    public Effet(int repetition, String message, Color couleurEffet, Bandeau bandeau) {
         this.repetition = repetition;
         this.message = message;
+        this.couleurEffet= couleurEffet;
         this.bandeau = bandeau;
+        
+   
     }
     
     

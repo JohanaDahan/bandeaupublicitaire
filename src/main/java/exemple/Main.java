@@ -6,6 +6,9 @@
 package exemple;
 
 import bandeau.Bandeau;
+import static java.awt.Color.BLACK;
+import static java.awt.Color.BLUE;
+import static java.awt.Color.GREEN;
 import java.util.ArrayList;
 
 /**
@@ -19,9 +22,9 @@ public class Main {
        Bandeau bandeau = new Bandeau();
        Scenario scenario = new Scenario( bandeau);
        
-       scenario.ajouteEffet(new Rotate(2, "ISIS", bandeau));
-       scenario.ajouteEffet(new Zoom(2, "MUSIC", bandeau));
-       scenario.ajouteEffet(new Clignotant(2, "CLUB", bandeau));
+       scenario.ajouteEffet(new Rotate(10, "ISIS",GREEN, bandeau));
+       scenario.ajouteEffet(new Zoom(5, "MUSIC", BLUE, bandeau));
+       scenario.ajouteEffet(new Clignotant(2, "CLUB", BLACK, bandeau));
        
  
        

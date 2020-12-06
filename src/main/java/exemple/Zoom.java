@@ -6,6 +6,8 @@
 package exemple;
 
 import bandeau.Bandeau;
+import java.awt.Color;
+import java.awt.Font;
 
 /**
  *
@@ -13,8 +15,18 @@ import bandeau.Bandeau;
  */
 public class Zoom extends Effet{
 
-    public Zoom(int repetition, String message, Bandeau bandeau) {
-        super(repetition, message, bandeau);
+    public Zoom(int repetition, String message,Color couleurEffet, Bandeau bandeau) {
+        super(repetition, message, couleurEffet, bandeau);
     }
     
+    public void play(Bandeau bandeau) {
+        bandeau.setForeground(couleurEffet);
+        bandeau.setMessage(message);
+        
+        for (int i = 5; i < 60 ; i+=5) {
+                bandeau.setFont(new Font("Dialog", Font.BOLD, 5+i));
+                bandeau.sleep(100);
+        }
+        bandeau.sleep(1000);
+    }
 }

@@ -6,7 +6,8 @@
 package exemple;
 
 import bandeau.Bandeau;
-import static java.awt.Color.BLUE;
+import java.awt.Color;
+
 
 /**
  *
@@ -14,19 +15,21 @@ import static java.awt.Color.BLUE;
  */
 public class Clignotant extends Effet {
     
-    public Clignotant(int repetition, String message, Bandeau bandeau) {
-        super(repetition, message, bandeau);
+    public Clignotant(int repetition, String message,Color couleurEffet, Bandeau bandeau) {
+        super(repetition, message,couleurEffet, bandeau);
     }
-    
-    public void execution(){
-        bandeau.setMessage(this.message);
-        for(int r =0; r<this.repetition;r++){
-            for(int i = 0;i<=15;i++ ){
-    }           bandeau.setForeground(BLUE);
-                bandeau.sleep(100);
-    
+     
+    public void play(Bandeau bandeau) {
+        bandeau.setForeground(couleurEffet);
+        bandeau.setMessage(message);
+        bandeau.sleep(500);
+        for (int i = 0; i <= repetition; i++) {
+            bandeau.setMessage(message);
+            bandeau.sleep(300);
+            bandeau.setMessage("");
+            bandeau.sleep(300);
         }
+        bandeau.sleep(1000);
     }
-
-    }
+}
     

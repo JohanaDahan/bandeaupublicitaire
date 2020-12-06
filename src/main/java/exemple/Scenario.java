@@ -11,17 +11,17 @@ import java.util.ArrayList;
  * @author johan
  */
 public class Scenario {
-    private ArrayList<Effet> listeEffets;
+    private ArrayList<Effet> mesEffets;
     private Bandeau bandeau;
 
     public Scenario( Bandeau bandeau) {
-        this.listeEffets = listeEffets;
+        this.mesEffets = mesEffets;
         this.bandeau = bandeau;
     }
 
     
-    public ArrayList<Effet> getListeEffets() {
-        return listeEffets;
+    public ArrayList<Effet> getmesEffets() {
+        return mesEffets;
     }
 
     public Bandeau getBandeau() {
@@ -29,6 +29,6 @@ public class Scenario {
     }
     public void ajouteEffet(Effet effet){
         
-        this.listeEffets.add(effet); 
+        this.mesEffets.add(effet); 
 }
 }
