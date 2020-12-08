@@ -30,5 +30,16 @@ public class Scenario {
     public void ajouteEffet(Effet effet){
         
         this.mesEffets.add(effet); 
+        
+    }
+        
+    public void jouerEffets(){
+        for(Effet effet:mesEffets){
+           effet.play();
+           bandeau.sleep(1000);
+       }
+    }
+
+      
 }
-}
+

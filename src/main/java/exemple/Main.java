@@ -25,10 +25,11 @@ public class Main {
        
        scenario.ajouteEffet(new Rotate(10, "ISIS",GREEN, bandeau));
        scenario.ajouteEffet(new Zoom(5, "MUSIC", BLUE, bandeau));
-       scenario.ajouteEffet(new Clignotant(2, "CLUB", BLACK, bandeau));
+       scenario.ajouteEffet(new Clignotant(2, "CLUB", BLACK, bandeau)); {
+}
        
  
-       
+      scenario.jouerEffets();
        
     }
      

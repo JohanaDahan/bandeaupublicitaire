@@ -10,13 +10,13 @@ import java.awt.Color;
  *
  * @author johan
  */
-public class Effet {
+public abstract  class Effet {
     public int repetition;
     public String message;
     protected Color couleurEffet;
     Bandeau bandeau;
     
-
+    
     public Effet(int repetition, String message, Color couleurEffet, Bandeau bandeau) {
         this.repetition = repetition;
         this.message = message;
@@ -27,5 +27,9 @@ public class Effet {
    
     }
     
+    /**
+     *
+     */
+    public abstract void play();
     
 }

@@ -15,7 +15,7 @@ import java.awt.Color;
  */ 
  
 
-    public class Rotate extends Effet{
+    public  class Rotate extends Effet{
        
     
 
@@ -23,7 +23,7 @@ import java.awt.Color;
         super(repetition, message, couleurEffet, bandeau);
     }
 
-
+    @Override
     public void play() {
         bandeau.setMessage(this.message);
         bandeau.setForeground(couleurEffet);

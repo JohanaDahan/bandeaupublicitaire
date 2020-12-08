@@ -19,7 +19,9 @@ public class Zoom extends Effet{
         super(repetition, message, couleurEffet, bandeau);
     }
     
-    public void play(Bandeau bandeau) {
+    
+    @Override
+    public void play() {
         bandeau.setForeground(couleurEffet);
         bandeau.setMessage(message);
         
@@ -29,4 +31,6 @@ public class Zoom extends Effet{
         }
         bandeau.sleep(1000);
     }
+
+  
 }

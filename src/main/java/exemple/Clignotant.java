@@ -13,13 +13,15 @@ import java.awt.Color;
  *
  * @author johan
  */
-public class Clignotant extends Effet {
+public  class Clignotant extends Effet {
     
     public Clignotant(int repetition, String message,Color couleurEffet, Bandeau bandeau) {
         super(repetition, message,couleurEffet, bandeau);
     }
-     
-    public void play(Bandeau bandeau) {
+    
+    
+    @Override
+    public void play() {
         bandeau.setForeground(couleurEffet);
         bandeau.setMessage(message);
         bandeau.sleep(500);
@@ -31,5 +33,7 @@ public class Clignotant extends Effet {
         }
         bandeau.sleep(1000);
     }
+
+    
 }
     
